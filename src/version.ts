@@ -24,7 +24,7 @@ import { DEFAULT_FILTERS, IPluginConfig } from "./config";
 export default async function (context: IContext, config: IPluginConfig): Promise<void> {
     const filters = config.filters || DEFAULT_FILTERS;
     if (config.packages != null) {
-        const globber = await glob.create(config.packages.join("\n"));
+        const globber = await glob.create(config.packages.join("\n"), { implicitDescendants: false });
         for (const packageDir of await globber.glob()) {
             unhoistShrinkwrap(packageDir);
             pruneShrinkwrap(filters, packageDir);

@@ -1,6 +1,6 @@
 {
   "name": "@octorelease/prune-shrinkwrap",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Octorelease plugin to prune npm shrinkwrap files.",
   "main": "lib/index.js",
   "files": [

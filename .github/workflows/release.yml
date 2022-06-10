@@ -35,4 +35,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       with:
-        new-version: ${{ github.events.inputs.version }}
+        new-version: ${{ github.event.inputs.version }}
